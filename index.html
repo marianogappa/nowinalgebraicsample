@@ -153,6 +153,25 @@
         }
         #actions { margin-top: 10px; }
         #actions a { cursor: pointer; }
+
+        /* Styling for chess board closer to book */
+        .white-1e1d7 { background-color: white;}
+        .black-3c85d { 
+            background: 
+                /* On "top" */
+                repeating-linear-gradient(
+                    135deg,
+                    transparent,
+                    transparent 0px,
+                    #444 2px,
+                    #444 3px
+                );
+        }
+        .board-b72b1 { border: 5px double #404040; padding: 1px; }
+        .notation-322f9 { color: black; }
+        .alpha-d2270 { bottom: -23px; right: 19px; }
+        .numeric-fc462 { top: 16px; left: -20px; }
+        body { margin-left: 10px; } /* To account for the Chess board number's negative margin */
     </style>
 </head>
 <body>
@@ -170,6 +189,7 @@
             <div id="actions"></div>
         </div>
     </div>
+    <br/>
     <h3>Switch to game (1-25)</h3>
     <input id="gameNumberInput" size="3" type="number" min="1" max="25" value="1" maxlength="3" />
     <a id="gameNumberInputButton" href="javascript:updateCurrentGame(parseInt(document.querySelector('#gameNumberInput').value))">Switch</a>
